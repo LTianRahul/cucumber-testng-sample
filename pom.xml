@@ -105,26 +105,26 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>net.masterthought</groupId>
-				<artifactId>maven-cucumber-reporting</artifactId>
-				<version>5.5.0</version>
-				<executions>
-					<execution>
-						<id>execution</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<projectName>LambdatestTodoSample</projectName>
-							<outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
-							<cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
-							<buildNumber>1</buildNumber>
-							<parallelTesting>true</parallelTesting>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+    <groupId>net.masterthought</groupId>
+    <artifactId>maven-cucumber-reporting</artifactId>
+    <version>5.5.0</version>
+    <executions>
+        <execution>
+            <id>execution</id>
+            <goals>
+                <goal>generate</goal>
+            </goals>
+            <configuration>
+                <projectName>CucumberTestNG</projectName>
+                <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
+                <jsonFiles>
+                    <param>${project.build.directory}/cucumber-reports/Cucumber.json</param>
+                </jsonFiles>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+
 		</plugins>
 	</build>
 </project>
