@@ -14,7 +14,7 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-    - task: Lambdatest.lambda-azure-pipeline-extention.configuration-task.configuration@1
+    - task: configuration@1
       displayName: "LambdaTest configuration setup"
       inputs:
         connection: 'cucumber-selenium-service-account'
@@ -26,7 +26,7 @@ stages:
       inputs:
         script: |
           mvn clean install
-    - task: Lambdatest.lambda-azure-pipeline-extention.showResults-task.LambdatestResults@1
+    - task: LambdatestResults@1
       displayName: "Lambdatest Results"
       env:
         LT_BUILD_NAME: Test_Sample_Cucumber
