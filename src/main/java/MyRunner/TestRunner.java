@@ -32,8 +32,8 @@ public final class TestRunner extends AbstractTestNGCucumberTests {
 
 		RemoteWebDriver remoteWebdriver = null;
 
-		String username = System.getenv("LT_USERNAME") == null ? "rahulkumarlambdatest" : System.getenv("LT_USERNAME");
-		String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "dboZK7so8koMnIR1tN11aKfMgxyKtDpb90IlyaCj4n6n7tQeK6" : System.getenv("LT_ACCESS_KEY");
+		String username = "rahulkumarlambdatest";
+		String accesskey = "dboZK7so8koMnIR1tN11aKfMgxyKtDpb90IlyaCj4n6n7tQeK6";
 
 		DesiredCapabilities capability = new DesiredCapabilities();
 		capability.setCapability(CapabilityType.BROWSER_NAME, browser);
