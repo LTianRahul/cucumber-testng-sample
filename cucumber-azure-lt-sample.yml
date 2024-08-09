@@ -17,18 +17,17 @@ stages:
     - task: Lambdatest.lambda-azure-pipeline-extention.configuration-task.configuration@1
       displayName: "LambdaTest configuration setup"
       inputs:
-        connection: 'Service Account Project sesstings'
-        isTunnelActivate: true
+        connection: 'cucumber-selenium-service-account'
+        isTunnelActivate: false
       env:
-        LT_BUILD_NAME: Test_Sample_Playwright
+        LT_BUILD_NAME: Test_Sample_Cucumber
     - task: CmdLine@2
       displayName: "Command Line Script"
       inputs:
         script: |
-          npm install
-          node playwright-single.js
+          mvn clean install
     - task: Lambdatest.lambda-azure-pipeline-extention.showResults-task.LambdatestResults@1
       displayName: "Lambdatest Results"
       env:
-        LT_BUILD_NAME: Test_Sample_Playwright
+        LT_BUILD_NAME: Test_Sample_Cucumber
 
