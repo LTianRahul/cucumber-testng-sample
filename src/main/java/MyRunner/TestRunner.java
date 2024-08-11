@@ -34,13 +34,14 @@ public final class TestRunner extends AbstractTestNGCucumberTests {
 
 		String username = "rahulkumarlambdatest";
 		String accesskey = "dboZK7so8koMnIR1tN11aKfMgxyKtDpb90IlyaCj4n6n7tQeK6";
+		public static string build = System.getenv("LT_BUILD_NAME") == null ? "your build name" : System.getenv("LT_BUILD_NAME");
 
 		DesiredCapabilities capability = new DesiredCapabilities();
 		capability.setCapability(CapabilityType.BROWSER_NAME, browser);
 		capability.setCapability(CapabilityType.VERSION, version);
 		capability.setCapability(CapabilityType.PLATFORM, platform);
 
-		capability.setCapability("build", "Cucumber Sample Build");
+		capability.setCapability("build", build);
 
 		// capability.setCapability("network", true);
 		// capability.setCapability("video", true);
