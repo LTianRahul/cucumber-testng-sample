@@ -34,7 +34,7 @@ public final class TestRunner extends AbstractTestNGCucumberTests {
 
 		String username = "rahulkumarlambdatest";
 		String accesskey = "dboZK7so8koMnIR1tN11aKfMgxyKtDpb90IlyaCj4n6n7tQeK6";
-		public static string build = System.getenv("LT_BUILD_NAME") == null ? "your build name" : System.getenv("LT_BUILD_NAME");
+		String build = System.getenv("LT_BUILD_NAME") == null ? "your build name" : System.getenv("LT_BUILD_NAME");
 
 		DesiredCapabilities capability = new DesiredCapabilities();
 		capability.setCapability(CapabilityType.BROWSER_NAME, browser);
