@@ -25,7 +25,7 @@ stages:
       displayName: "Command Line Script"
       inputs:
         script: |
-          mvn clean install
+          mvn clean test
     - task: LambdatestResults@1
       displayName: "Lambdatest Results"
       env:
