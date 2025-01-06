@@ -4,9 +4,9 @@ trigger:
     - main
 variables:
 - name: LT_USERNAME
-  value: 'rahulkumarlambdatest'
+  value: ''
 - name: LT_ACCESS_KEY
-  value: 'dboZK7so8koMnIR1tN11aKfMgxyKtDpb90IlyaCj4n6n7tQeK6'
+  value: ''
 stages:
 - stage: __default
   jobs:
