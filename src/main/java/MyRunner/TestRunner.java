@@ -43,7 +43,7 @@ public final class TestRunner extends AbstractTestNGCucumberTests {
 
 		capability.setCapability("build", build);
 
-		capability.setCapability("network", true);
+		capability.setCapability("network", false);
 		capability.setCapability("video", true);
 		capability.setCapability("console", true);
 		capability.setCapability("visual", true);
