@@ -43,10 +43,10 @@ public final class TestRunner extends AbstractTestNGCucumberTests {
 
 		capability.setCapability("build", build);
 
-		// capability.setCapability("network", true);
-		// capability.setCapability("video", true);
-		// capability.setCapability("console", true);
-		// capability.setCapability("visual", true);
+		capability.setCapability("network", true);
+		capability.setCapability("video", true);
+		capability.setCapability("console", true);
+		capability.setCapability("visual", true);
 
 		String gridURL = "https://" + username + ":" + accesskey + "@hub.lambdatest.com/wd/hub";
 		System.out.println(gridURL);
